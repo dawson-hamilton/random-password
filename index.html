@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Random Password</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
+</head>
+
+<body>
+    <div class="outer" title=" ">
+        <form>
+            <div id="upper">
+                <input type="checkbox" checked><input type="text">
+                <span> <a href="#">reset</a></span>
+            </div>
+            <div id="lower">
+                <input type="checkbox" checked><input type="text">
+                <span> <a href="#">reset</a></span>
+            </div>
+            <div id="number">
+                <input type="checkbox" checked><input type="text">
+                <span> <a href="#">reset</a></span>
+            </div>
+            <div id="special">
+                <input type="checkbox" checked><input type="text">
+                <span> <a href="#">reset</a></span>
+            </div>
+            <br />
+            Length: <input id="length" type="text" value="50"><br />
+            <input type="submit" value="Generate" onclick="generatePassword(); return false;">
+        </form>
+        <p id="display-password"></p>
+        <button onclick="copyToClipboard('#display-password')">Copy Password</button>
+    </div>
+    <style type="text/css">
+        p#display-password {
+            font-family: monospace;
+        }
+    </style>
+</body>
+
+</html>
