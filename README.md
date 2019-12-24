@@ -1,4 +1,4 @@
-random-password
+#random-password
 This program takes values that are set and makes a random password with as many characters that you would like. You can change 
 the values you want in your password by changing it in the boxes that are provided. you can also just uncheck the checkmark on 
 the left and it wont use any of the values that are in that box. if you messed it up you can just reset to what it was in the 
