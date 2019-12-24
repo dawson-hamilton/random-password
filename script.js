@@ -25,23 +25,32 @@ window.onload = function () {
 }
 function _generatePassword(passwordLength, charBlocks) {
     var allChars = "";
-    for (var i = 0; i < charBlocks.length; i++) {
-        allChars += charBlocks[i];
+    if (passwordLength < 8 || passwordLength > 128) {
+        alert("give a number of characters that is between 8 and 128");
+    } else {
+        for (var i = 0; i < charBlocks.length; i++) {
+            allChars += charBlocks[i];
+        }
+        var numChars = allChars.length;
+        var password = "";
+        for (var i = 1; i <= passwordLength; i++) {
+            password += allChars.charAt(Math.floor(Math.random() * numChars));
+        }
+        return password;
     }
-    var numChars = allChars.length;
-    var password = "";
-    for (var i = 1; i <= passwordLength; i++) {
-        password += allChars.charAt(Math.floor(Math.random() * numChars));
-    }
-    return password;
 }
+
 function generatePassword(passwordLength) {
     var charBlocks = [];
-    for (id in charTypes) {
-        var isTicked = document.querySelector('div#' + id + ' input[type=checkbox]').checked;
-        var value = document.querySelector('div#' + id + ' input[type=text]').value;
-        if (isTicked) {
-            charBlocks.push(value);
+    if (passwordLength < 8 || passwordLength > 128) {
+        alert("give a number of characters that is between 8 and 128");
+    } else {
+        for (id in charTypes) {
+            var isTicked = document.querySelector('div#' + id + ' input[type=checkbox]').checked;
+            var value = document.querySelector('div#' + id + ' input[type=text]').value;
+            if (isTicked) {
+                charBlocks.push(value);
+            }
         }
     }
 

@@ -1,0 +1,26 @@
+p#display-password {
+    font-family: monospace;
+}
+
+.outer {
+    margin: 20px;
+    padding: 20px;
+}
+
+#length {
+    margin-bottom: 10px;
+}
+
+#submit {
+    margin-bottom: 10px;
+}
+#body{
+    background-color: darkcyan;
+}
+.boxes{
+    position:absolute;
+    left: 35%;
+    padding: 25px;
+    background-color: black;
+    color: white;
+}

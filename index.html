@@ -7,40 +7,55 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="./script.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <div class="outer" title=" ">
-        <form>
-            <div id="upper">
-                <input type="checkbox" checked><input type="text">
-                <span> <a href="#">reset</a></span>
-            </div>
-            <div id="lower">
-                <input type="checkbox" checked><input type="text">
-                <span> <a href="#">reset</a></span>
-            </div>
-            <div id="number">
-                <input type="checkbox" checked><input type="text">
-                <span> <a href="#">reset</a></span>
-            </div>
-            <div id="special">
-                <input type="checkbox" checked><input type="text">
-                <span> <a href="#">reset</a></span>
-            </div>
-            <br />
-            Length: <input id="length" type="text" value="50"><br />
-            <input type="submit" value="Generate" onclick="generatePassword(); return false;">
-        </form>
-        <p id="display-password"></p>
-        <button onclick="copyToClipboard('#display-password')">Copy Password</button>
+<body id="body">
+    <div class="outer">
+        <p style="text-align: center;">
+            Below you see a list of boxes that have different characters in them. You have a box for the upper case
+            letter, you have a box for all the lowercase letters, you have a box fro all the numbers and you also have a
+            box for all the special characters. You can see that these are input boxes because you can go in and delete
+            whatever character from those boxes that you dont what in your password. You will also see a reset button
+            next to the boxes that if you deleted a bunch of things on accident then it will reset it to what it was
+            before you deleted any of the characters. To the left of the input boxes you will se a little checkbox that
+            you can hit that will just not put any of the chacters in the password if the check mark isnt there. If
+            you want to put all those characters in the possibility of characters again then just make sure that the
+            check mark is on the little box. At the bottom you can see that you can chose how many characters you want
+            the password to be (password has to be 8-128 characcters long).
+        </p>
+        <h3 style="text-align: center;">Delete any characters you dont want in your password</h3>
+        <div class="boxes">
+            <form>
+                <div id="upper">
+                    <p>Upper Case Letters:</p>
+                    <input type="checkbox" checked><input type="text">
+                    <span> <a href="#">reset</a></span>
+                </div>
+                <div id="lower">
+                    <p>Lower Case Letters:</p>
+                    <input type="checkbox" checked><input type="text">
+                    <span> <a href="#">reset</a></span>
+                </div>
+                <div id="number">
+                    <p>Numbers:</p>
+                    <input type="checkbox" checked><input type="text">
+                    <span> <a href="#">reset</a></span>
+                </div>
+                <div id="special">
+                    <p>Special Characters:</p>
+                    <input type="checkbox" checked><input type="text">
+                    <span> <a href="#">reset</a></span>
+                </div>
+                <br>
+                Length: <input id="length" type="text" value="25"><br />
+                <input id="submit" type="submit" value="Generate" onclick="generatePassword(); return false;">
+            </form>
+            <p id="display-password"></p>
+            <button onclick="copyToClipboard('#display-password')">Copy Password</button>
+        </div>
     </div>
-    <style type="text/css">
-        p#display-password {
-            font-family: monospace;
-        }
-    </style>
+    <script src="./script.js"></script>
 </body>
 
 </html>
