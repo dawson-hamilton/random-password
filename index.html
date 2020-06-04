@@ -11,7 +11,7 @@
 </head>
 
 <body id="body">
-    <div class="outer">
+    <!-- <div class="outer">
         <p style="text-align: center;">
             Below you see a list of boxes that have different characters in them. You have a box for the upper case
             letter, you have a box for all the lowercase letters, you have a box fro all the numbers and you also have a
@@ -54,6 +54,41 @@
             </form>
             <p id="display-password"></p>
             <button onclick="copyToClipboard('#display-password')">Copy Password</button>
+        </div>
+    </div> -->
+
+    <div class="container">
+        <br>
+        <h1>Random Password Generator</h1>
+        <br>
+        <br>
+        <div class="generator">
+            <div class="gererator-input strong">
+                <div class="password">++WEO6@TGFazCs[0'epbAGh^K</div> <span
+                    class="indicator hide-with-timeout strong show-with-timeout">Very strong</span>
+                <div class="control-buttons hide-with-timeout show-with-timeout">
+                    <div class="generate-icon"></div> <a class="pam-button primary mini" data-tippy=""
+                        data-original-title="Copied">
+                        Copy
+                    </a>
+                </div>
+            </div>
+            <div class="generator-settings hide-with-timeout show-with-timeout">
+                <div class="length-settings"><label for="length" class="first">Password length: </label> <span
+                        class="length">25</span>
+                    <div class="button minus unselectable"></div> <input type="range" min="1" max="50" class="slider">
+                    <div class="button plus unselectable"></div>
+                </div>
+                <div class="complexity-settings"><label class="first">Characters used: </label> <label for="uppercase"
+                        class="checkbox-label">ABC
+                        <input id="uppercase" type="checkbox"> <span class="checkmark"></span></label> <label
+                        for="lowercase" class="checkbox-label">abc
+                        <input id="lowercase" type="checkbox"> <span class="checkmark"></span></label> <label
+                        for="numbers" class="checkbox-label">123
+                        <input id="numbers" type="checkbox"> <span class="checkmark"></span></label> <label
+                        for="specilas" class="checkbox-label last">#$&amp;
+                        <input id="specilas" type="checkbox"> <span class="checkmark"></span></label></div>
+            </div>
         </div>
     </div>
     <script src="./script.js"></script>

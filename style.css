@@ -1,4 +1,4 @@
-p#display-password {
+/* p#display-password {
     font-family: monospace;
 }
 
@@ -23,4 +23,8 @@ p#display-password {
     padding: 25px;
     background-color: black;
     color: white;
+} */
+
+.container {
+    text-align: center;
 }
