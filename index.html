@@ -11,86 +11,54 @@
 </head>
 
 <body id="body">
-    <!-- <div class="outer">
-        <p style="text-align: center;">
-            Below you see a list of boxes that have different characters in them. You have a box for the upper case
-            letter, you have a box for all the lowercase letters, you have a box fro all the numbers and you also have a
-            box for all the special characters. You can see that these are input boxes because you can go in and delete
-            whatever character from those boxes that you dont what in your password. You will also see a reset button
-            next to the boxes that if you deleted a bunch of things on accident then it will reset it to what it was
-            before you deleted any of the characters. To the left of the input boxes you will se a little checkbox that
-            you can hit that will just not put any of the chacters in the password if the check mark isnt there. If
-            you want to put all those characters in the possibility of characters again then just make sure that the
-            check mark is on the little box. At the bottom you can see that you can chose how many characters you want
-            the password to be (password has to be 8-128 characcters long). when you are done you can click the copy
-            to clipboard button and you can just go and paste it into wherever you tell it to.
-        </p>
+    <br>
+    <br>
+    <br>
+    <h1 style="text-align: center;">Random Password Generator</h1>
+    <div class="outer">
         <h3 style="text-align: center;">Delete any characters you dont want in your password</h3>
         <div class="boxes">
             <form>
-                <div id="upper">
-                    <p>Upper Case Letters:</p>
-                    <input type="checkbox" checked><input type="text">
-                    <span> <a href="#">reset</a></span>
-                </div>
-                <div id="lower">
-                    <p>Lower Case Letters:</p>
-                    <input type="checkbox" checked><input type="text">
-                    <span> <a href="#">reset</a></span>
-                </div>
-                <div id="number">
-                    <p>Numbers:</p>
-                    <input type="checkbox" checked><input type="text">
-                    <span> <a href="#">reset</a></span>
-                </div>
-                <div id="special">
-                    <p>Special Characters:</p>
-                    <input type="checkbox" checked><input type="text">
-                    <span> <a href="#">reset</a></span>
+                <div id="left">
+                    <div id="upper">
+                        <!-- <p>Upper Case Letters:</p> -->
+                        <input type="checkbox" checked><input type="text" class="form-control">
+                        <span> <a href="#">reset</a></span>
+                    </div>
+                    <br>
+                    <div id="lower">
+                        <!-- <p>Lower Case Letters:</p> -->
+                        <input type="checkbox" checked><input type="text" class="form-control">
+                        <span> <a href="#">reset</a></span>
+                    </div>
                 </div>
                 <br>
-                Length: <input id="length" type="text" value="25"><br />
-                <input id="submit" type="submit" value="Generate" onclick="generatePassword(); return false;">
+                <div id="right">
+                    <div id="number">
+                        <!-- <p>Numbers:</p> -->
+                        <input type="checkbox" checked><input type="text" class="form-control">
+                        <span> <a href="#">reset</a></span>
+                    </div>
+                    <br>
+                    <div id="special">
+                        <!-- <p>Special Characters:</p> -->
+                        <input type="checkbox" checked><input type="text" class="form-control">
+                        <span> <a href="#">reset</a></span>
+                    </div>
+                </div>
+                <br>
+                <h3>Length:</h3>
+                <div class="slidecontainer">
+                    <input id="length" type="range" min="1" max="50" value="25" class="slider" id="myRange"
+                        oninput="generatePassword(); return false">
+                    <p>Value: <span id="demo" style="color: black;">25</span></p>
+                </div>
             </form>
             <p id="display-password"></p>
             <button onclick="copyToClipboard('#display-password')">Copy Password</button>
         </div>
-    </div> -->
-
-    <div class="container">
-        <br>
-        <h1>Random Password Generator</h1>
-        <br>
-        <br>
-        <div class="generator">
-            <div class="gererator-input strong">
-                <div class="password">++WEO6@TGFazCs[0'epbAGh^K</div> <span
-                    class="indicator hide-with-timeout strong show-with-timeout">Very strong</span>
-                <div class="control-buttons hide-with-timeout show-with-timeout">
-                    <div class="generate-icon"></div> <a class="pam-button primary mini" data-tippy=""
-                        data-original-title="Copied">
-                        Copy
-                    </a>
-                </div>
-            </div>
-            <div class="generator-settings hide-with-timeout show-with-timeout">
-                <div class="length-settings"><label for="length" class="first">Password length: </label> <span
-                        class="length">25</span>
-                    <div class="button minus unselectable"></div> <input type="range" min="1" max="50" class="slider">
-                    <div class="button plus unselectable"></div>
-                </div>
-                <div class="complexity-settings"><label class="first">Characters used: </label> <label for="uppercase"
-                        class="checkbox-label">ABC
-                        <input id="uppercase" type="checkbox"> <span class="checkmark"></span></label> <label
-                        for="lowercase" class="checkbox-label">abc
-                        <input id="lowercase" type="checkbox"> <span class="checkmark"></span></label> <label
-                        for="numbers" class="checkbox-label">123
-                        <input id="numbers" type="checkbox"> <span class="checkmark"></span></label> <label
-                        for="specilas" class="checkbox-label last">#$&amp;
-                        <input id="specilas" type="checkbox"> <span class="checkmark"></span></label></div>
-            </div>
-        </div>
     </div>
+
     <script src="./script.js"></script>
 </body>
 

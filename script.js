@@ -4,6 +4,7 @@ var charTypes = {
     'number': '0123456789',
     'special': '!$%^&*()-=+[]{};#:@~,./<>?'
 };
+
 window.onload = function () {
     var inputs = document.querySelectorAll('form div input[type=text]');
     for (var i = 0; i < inputs.length; i++) {
@@ -23,34 +24,28 @@ window.onload = function () {
         }(input, type);
     }
 }
+
 function _generatePassword(passwordLength, charBlocks) {
     var allChars = "";
-    if (passwordLength < 8 || passwordLength > 128) {
-        alert("give a number of characters that is between 8 and 128");
-    } else {
-        for (var i = 0; i < charBlocks.length; i++) {
-            allChars += charBlocks[i];
-        }
-        var numChars = allChars.length;
-        var password = "";
-        for (var i = 1; i <= passwordLength; i++) {
-            password += allChars.charAt(Math.floor(Math.random() * numChars));
-        }
-        return password;
+    for (var i = 0; i < charBlocks.length; i++) {
+        allChars += charBlocks[i];
     }
+    var numChars = allChars.length;
+    var password = "";
+    for (var i = 1; i <= passwordLength; i++) {
+        password += allChars.charAt(Math.floor(Math.random() * numChars));
+    }
+    return password;
 }
 
 function generatePassword(passwordLength) {
+    var output = document.getElementById("demo");
     var charBlocks = [];
-    if (passwordLength < 8 || passwordLength > 128) {
-        alert("give a number of characters that is between 8 and 128");
-    } else {
-        for (id in charTypes) {
-            var isTicked = document.querySelector('div#' + id + ' input[type=checkbox]').checked;
-            var value = document.querySelector('div#' + id + ' input[type=text]').value;
-            if (isTicked) {
-                charBlocks.push(value);
-            }
+    for (id in charTypes) {
+        var isTicked = document.querySelector('div#' + id + ' input[type=checkbox]').checked;
+        var value = document.querySelector('div#' + id + ' input[type=text]').value;
+        if (isTicked) {
+            charBlocks.push(value);
         }
     }
 
@@ -60,6 +55,7 @@ function generatePassword(passwordLength) {
     var password = _generatePassword(passwordLength, charBlocks);
     var $display = document.getElementById('display-password');
     $display.textContent = password;
+    output.innerHTML = passwordLength;
 }
 
 function copyToClipboard(element) {
@@ -68,4 +64,4 @@ function copyToClipboard(element) {
     $temp.val($(element).text()).select();
     document.execCommand("copy");
     $temp.remove();
-}  
+}
