@@ -23,6 +23,7 @@ window.onload = function () {
             };
         }(input, type);
     }
+    this.generatePassword();
 }
 
 function _generatePassword(passwordLength, charBlocks) {
