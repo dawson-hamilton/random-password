@@ -99,11 +99,11 @@
 }
 
 .two {
-    background-color: orangered;
+    background-color: darkorange;
 }
 
 .three {
-    background-color: yellow;
+    background-color: #F1C80B;
 }
 
 .four {
@@ -126,6 +126,11 @@
     border-top-right-radius: 0px;
 }
 
+#passwordCol {
+    padding: 0px;
+    margin:0px;
+}
+
 #display-password {
     margin-top: 5px;
 }
@@ -133,4 +138,5 @@
 #strength {
     color: white;
     font-weight: bold;
+    margin-left: 10px;
 }
