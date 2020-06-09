@@ -71,5 +71,12 @@
 
 #copyBtn {
     margin-top: 12%;
+    margin-right: 10%;
     float: right;
+}
+
+.refresh {
+    font-size: 35px;
+    margin-top: 12%;
+    margin-left: 20%;
 }
