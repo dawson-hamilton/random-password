@@ -56,6 +56,9 @@ function generatePassword(passwordLength) {
     var $display = document.getElementById('display-password');
     $display.textContent = password;
     output.innerHTML = passwordLength;
+
+    $("#copyBtn").removeClass("btn-success");
+    $("#copyBtn").addClass("btn-warning");
 }
 
 function copyToClipboard(element) {
@@ -64,4 +67,6 @@ function copyToClipboard(element) {
     $temp.val($(element).text()).select();
     document.execCommand("copy");
     $temp.remove();
+    $("#copyBtn").removeClass("btn-warning");
+    $("#copyBtn").addClass("btn-success");
 }
