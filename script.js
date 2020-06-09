@@ -60,6 +60,18 @@ function generatePassword(passwordLength) {
 
     $("#copyBtn").removeClass("btn-success");
     $("#copyBtn").addClass("btn-warning");
+
+    if (passwordLength < 4) {
+        $("#strength").text("very weak");
+    } else if (passwordLength < 7 && passwordLength > 3) {
+        $("#strength").text("weak");
+    } else if (passwordLength < 9 && passwordLength > 6) {
+        $("#strength").text("good");
+    } else if (passwordLength < 11 && passwordLength > 8) {
+        $("#strength").text("strong");
+    } else if (passwordLength > 10) {
+        $("#strength").text("very strong")
+    }
 }
 
 function copyToClipboard(element) {
