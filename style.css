@@ -83,13 +83,54 @@
 
 .refresh:hover {
     -webkit-transition: all 0.6s ease-in-out;
-     -moz-transition: all 0.6s ease-in-out;
-     -o-transition: all 0.6s ease-in-out;
-     -ms-transition: all 0.6s ease-in-out;
-      transition: all 0.6s ease-in-out;
-     -webkit-transform: rotate(360deg);
-     -o-transform: rotate(360deg);
-     -moz-transform: rotate(360deg);
-     -ms-transform: rotate(360deg);
-     transform: rotate(360deg);
+    -moz-transition: all 0.6s ease-in-out;
+    -o-transition: all 0.6s ease-in-out;
+    -ms-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+.one {
+    background-color: red;
+}
+
+.two {
+    background-color: orangered;
+}
+
+.three {
+    background-color: yellow;
+}
+
+.four {
+    background-color: green;
+}
+
+#password {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    height: 40px;
+}
+
+#passwordStrength {
+    height: 27px;
+    border-radius: 5px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+#display-password {
+    margin-top: 5px;
+}
+
+#strength {
+    color: white;
+    font-weight: bold;
 }
