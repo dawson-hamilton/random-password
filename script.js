@@ -69,18 +69,28 @@ function generatePassword(passwordLength) {
         $("#strength").text("weak");
         $("#passwordStrength").removeClass();
         $("#passwordStrength").addClass("one");
+        $("#passwordCol").removeClass("two");
+        $("#passwordCol").addClass("one");
     } else if (passwordLength < 9 && passwordLength > 6) {
         $("#strength").text("good");
         $("#passwordStrength").removeClass();
         $("#passwordStrength").addClass("two");
+        $("#passwordCol").removeClass("one");
+        $("#passwordCol").removeClass("three");
+        $("#passwordCol").addClass("two");
     } else if (passwordLength < 11 && passwordLength > 8) {
         $("#strength").text("strong");
         $("#passwordStrength").removeClass();
         $("#passwordStrength").addClass("three");
+        $("#passwordCol").removeClass("two");
+        $("#passwordCol").removeClass("four");
+        $("#passwordCol").addClass("three");
     } else if (passwordLength > 10) {
         $("#strength").text("very strong")
         $("#passwordStrength").removeClass();
         $("#passwordStrength").addClass("four");
+        $("#passwordCol").removeClass("three");
+        $("#passwordCol").addClass("four");
     }
 }
 
