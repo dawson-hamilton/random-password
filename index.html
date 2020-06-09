@@ -19,43 +19,55 @@
         <h3 style="text-align: center;">Delete any characters you dont want in your password</h3>
         <div class="boxes">
             <form>
-                <div id="left">
-                    <div id="upper">
-                        <!-- <p>Upper Case Letters:</p> -->
-                        <input type="checkbox" checked><input type="text" class="form-control">
-                        <span> <a href="#">reset</a></span>
+                <div class="row" id="characters">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-3" id="left">
+                        <div id="upper">
+                            <input type="checkbox" checked><input type="text" class="form-control">
+                            <span> <a href="#">reset</a></span>
+                        </div>
+                        <br>
+                        <div id="lower">
+                            <input type="checkbox" checked><input type="text" class="form-control">
+                            <span> <a href="#">reset</a></span>
+                        </div>
                     </div>
+                    <div class="col-md-1"></div>
                     <br>
-                    <div id="lower">
-                        <!-- <p>Lower Case Letters:</p> -->
-                        <input type="checkbox" checked><input type="text" class="form-control">
-                        <span> <a href="#">reset</a></span>
+                    <div class="col-md-3" id="right">
+                        <div id="number">
+                            <input type="checkbox" checked><input type="text" class="form-control">
+                            <span> <a href="#">reset</a></span>
+                        </div>
+                        <br>
+                        <div id="special">
+                            <input type="checkbox" checked><input type="text" class="form-control">
+                            <span> <a href="#">reset</a></span>
+                        </div>
                     </div>
                 </div>
                 <br>
-                <div id="right">
-                    <div id="number">
-                        <!-- <p>Numbers:</p> -->
-                        <input type="checkbox" checked><input type="text" class="form-control">
-                        <span> <a href="#">reset</a></span>
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <h3>Length:</h3>
+                        <div class="slidecontainer">
+                            <input id="length" type="range" min="1" max="50" value="25" class="slider" id="myRange"
+                                oninput="generatePassword(); return false">
+                            <p>Value: <span id="demo" style="color: black;">25</span></p>
+                        </div>
                     </div>
-                    <br>
-                    <div id="special">
-                        <!-- <p>Special Characters:</p> -->
-                        <input type="checkbox" checked><input type="text" class="form-control">
-                        <span> <a href="#">reset</a></span>
-                    </div>
-                </div>
-                <br>
-                <h3>Length:</h3>
-                <div class="slidecontainer">
-                    <input id="length" type="range" min="1" max="50" value="25" class="slider" id="myRange"
-                        oninput="generatePassword(); return false">
-                    <p>Value: <span id="demo" style="color: black;">25</span></p>
+                    <div class="col-md-2"></div>
                 </div>
             </form>
-            <p id="display-password"></p>
-            <button onclick="copyToClipboard('#display-password')">Copy Password</button>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <p id="display-password"></p>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <button class="btn btn-warning" onclick="copyToClipboard('#display-password')">Copy Password</button>
         </div>
     </div>
 

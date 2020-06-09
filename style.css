@@ -12,13 +12,6 @@
     margin-bottom: 10px;
 }
 
-.boxes{
-    position:absolute;
-    left: 35%;
-    padding: 25px;
-    border-radius: 3%;
-}
-
 .form-control {
     float: right;
     width: 90%;
@@ -63,5 +56,15 @@
 }
 
 #left {
+    position: relative;
     float: left;
+}
+
+#right {
+    position: relative;
+    float: right;
+}
+
+#characters {
+    margin-left: 5%;
 }
