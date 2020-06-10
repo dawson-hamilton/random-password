@@ -103,3 +103,7 @@ function copyToClipboard(element) {
     $("#copyBtn").removeClass("btn-warning");
     $("#copyBtn").addClass("btn-success");
 }
+
+document.getElementById("copyBtn").addEventListener("click", function (event) {
+    event.preventDefault()
+});
