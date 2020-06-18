@@ -1,3 +1,7 @@
+body {
+    font-family: 'Staatliches', cursive;
+}
+
 .outer {
     margin: 20px;
     padding: 20px;
@@ -118,6 +122,7 @@
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     height: 40px;
+    font-size: 20px;
 }
 
 #passwordStrength {
@@ -141,24 +146,20 @@
 
 #strength {
     color: white;
-    font-weight: bold;
     margin-left: 10px;
+    font-size: 20px;
 }
 
 .form-control {
     height: 50px;
 }
 
-.btn-link {
-    color: black;
-}
-
-.btn-link:hover{
-    color: black;
-    text-decoration: none;
-}
-
 li {
     font-size: 1.25rem;
     font-weight: 500;
+}
+
+.collapseInfo {
+    margin-left: 50px;
+    margin-right: 50px;
 }
