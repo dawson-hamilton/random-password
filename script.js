@@ -107,3 +107,4 @@ function copyToClipboard(element) {
 document.getElementById("copyBtn").addEventListener("click", function (event) {
     event.preventDefault()
 });
+
